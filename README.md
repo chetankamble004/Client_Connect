@@ -14,3 +14,27 @@ Dynamic Record Management: The program dynamically handles multiple client recor
 Files in the Project:
 
 client.cpp: This is the main file where all client operations are performed. It defines a client class that includes methods for setting and getting client information. The system interacts with users through a command-line interface (CLI), prompting them for input based on various operations (Add, Update, Delete, Show).
+
+Core Components:
+
+Client Class:
+
+This class contains attributes such as id, name, service, and budget to store the client's information.
+Methods:
+set_client_info(int i, string n, string s, float b): Sets the client's information.
+get_client_info(): Displays the client's information.
+
+Main Function:
+
+The main() function provides a loop with a menu of options (Add client, Update client, Delete client, Show client, Exit).
+User input is handled in this function to trigger corresponding actions for managing clients.
+A dynamic array (all_clients[]) is used to store all client objects.
+Functionality Details:
+
+Add Clients: The program first asks how many clients to add, then it iterates over that number and prompts the user for details of each client, storing the information in an array of client objects.
+
+Update Clients: The user can choose to update either a client's budget or service. The program prompts for the client ID and updates the selected field accordingly.
+
+Delete Clients: Clients can be removed by specifying the client ID. The system deletes the client and shifts all remaining client records accordingly to ensure data integrity.
+
+Show Clients: The program will list all clients stored in the system, displaying their details in a user-friendly format.
